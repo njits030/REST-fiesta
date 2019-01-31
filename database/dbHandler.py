@@ -57,7 +57,13 @@ class handler(object):
 		db.close()
 		return data
 
-	def put(self, data):
+	def put(self, data, id):
+		db = self.connect_db()
+		for key in data:
+			db.cursor().execute(f"UPDATE {settings.tableName} SET {key} = '{data[key]}' WHERE ID = ?;", (id, ))
+
+		db.commit()
+		db.close()
 		return data
 
 	def delete_one(self, id):

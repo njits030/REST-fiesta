@@ -41,11 +41,11 @@ def post():
 	data = db.post(requestData)
 	return json.dumps(data), 201
 
-# @app.route('/<int:id>', methods = ["PUT"])
-# def put(id):
-# 	jsonData = flask.request.json
-# 	data = db.put(requestData)
-# 	return json.dumps(data), 201
+@app.route('/<int:id>', methods = ["PUT"])
+def put(id):
+	requestData = flask.request.json
+	data = db.put(requestData, id)
+	return json.dumps(data), 201
 
 ################################################################################
 # Delete data from the database
