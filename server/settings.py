@@ -7,9 +7,6 @@ columns = {
 	"email": "TEXT"
 }
 
-# Python path to virtual environment
-python_path = '/path/to/env/bin/activate_this.py'
-
 # Debug options
 host = 'localhost'
 port = 8000
