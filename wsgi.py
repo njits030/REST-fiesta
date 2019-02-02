@@ -1,6 +1,8 @@
-import server.server.app as application
+from server import server
 from server import settings
 import sys
+
+application = server.app
 
 activate_this = settings.python_path
 with open(activate_this) as file_:
