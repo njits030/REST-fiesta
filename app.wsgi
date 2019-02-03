@@ -1,1 +1,1 @@
-import server.app as application
+import server as application
