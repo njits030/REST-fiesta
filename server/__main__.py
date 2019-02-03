@@ -71,7 +71,8 @@ def delete(id):
 ################################################################################
 @app.route('/help', methods = ["GET"])
 def displayHelp():
-	return
+	content = markdown.markdown(open('README.md'))
+	return content, 200
 
 ################################################################################
 # Error handling
