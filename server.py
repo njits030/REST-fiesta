@@ -18,6 +18,7 @@ app = flask.Flask(__name__)
 ################################################################################
 
 @app.route('/', methods = ["GET"])
+@app.route('/retrieve', methods = ["GET"])
 def retrieve():
 	data = db.get_all()
 	if data == None:
@@ -25,6 +26,7 @@ def retrieve():
 	return json.dumps(data), 200
 
 @app.route('/<int:id>', methods = ["GET"])
+@app.route('/retrieve/<int:id>', methods = ["GET"])
 def retrieveSpecific(id):
 	data = db.get_one(id)
 	if data == None:
@@ -36,12 +38,14 @@ def retrieveSpecific(id):
 ################################################################################
 
 @app.route('/', methods = ["POST"])
+@app.route('/post', methods = ["POST"])
 def post():
 	requestData = flask.request.json
 	data = db.post(requestData)
 	return json.dumps(data), 201
 
 @app.route('/<int:id>', methods = ["PUT"])
+@app.route('/post/<int:id>', methods = ["PUT"])
 def put(id):
 	requestData = flask.request.json
 	data = db.put(requestData, id)
@@ -57,6 +61,7 @@ def reset():
 	return f"Table data reset", 204
 
 @app.route('/<int:id>', methods = ["DELETE"])
+@app.route('/delete/<int:id>', methods = ["DELETE"])
 def delete(id):
 	db.delete_one(id)
 	return f"Deleted entry {id}", 204

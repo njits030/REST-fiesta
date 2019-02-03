@@ -3,7 +3,7 @@
 ################################################################################
 
 import sqlite3, json
-from server import settings
+import settings
 
 ################################################################################
 # Class for handling the database

@@ -4,7 +4,8 @@ tableName = 'myTable'
 
 columns = {
 	"name": "TEXT",
-	"email": "TEXT"
+	"email": "TEXT",
+	"phone": "TEXT"
 }
 
 # Python path to virtual environment
