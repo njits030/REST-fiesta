@@ -1,4 +1,4 @@
 from RESTapi import app as application
-import os
+import sys
 
-os.path.split(__file__)[0]
+sys.path.insert(0,"path/to/your/app/")
