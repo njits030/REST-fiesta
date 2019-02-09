@@ -3,7 +3,7 @@
 
 * Edit the settings.py file to suit your database needs.
 * Run pip to install the required python modules from the requirements.txt.
-* change the path in app.wsgi to comply woth your server
+* change the paths for both the virtual environment and the api in app.wsgi to comply with your server
 * Deploy the web server using apache2 and mod_wsgi (link to app.wsgi).
 
 ***
