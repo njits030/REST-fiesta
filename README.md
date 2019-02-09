@@ -2,8 +2,8 @@
 ## Setup
 
 * Edit the settings.py file to suit your database needs.
-* Run pip to install the requirements.txt
-* Deploy the web server using apache2 and mod_wsgi
+* Run pip to install the required python modules from the requirements.txt.
+* Deploy the web server using apache2 and mod_wsgi (link to app.wsgi).
 
 ***
 ## Documentation
