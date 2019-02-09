@@ -1,4 +1,4 @@
-import RESTapi as application
+from RESTapi import app as application
 import sys
 
 activate_this = '/path/to/env/bin/activate_this.py'
