@@ -1,4 +1,4 @@
-# Database ocnfiguration
+# Database configuration
 databaseFile = 'db.sqlite3'
 tableName = 'myTable'
 
